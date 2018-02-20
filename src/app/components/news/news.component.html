@@ -1,0 +1,75 @@
+<app-header></app-header>
+<br />
+<h2>这是一个新闻组件</h2>
+
+{{title}}
+
+<br>
+
+{{msg}}
+
+<br>
+
+{{msg01}}
+
+<br>
+
+{{username}}
+
+<br>
+
+<div id="{{id}}">这是一个 div 调试工具看一下我的属性01</div>
+
+<br>
+
+<div title="{{msg}}">鼠标🖱放上去看看</div>
+<div [title]="msg">鼠标🖱放上去看看</div>
+
+<br>
+
+{{h}}
+
+<br>
+
+<span [innerHTML]="h"></span>
+
+<br>
+
+{{obj.name}} --- {{obj.age}}
+
+<br>
+
+<ul>
+	<li *ngFor="let item of list">{{item}}</li>
+</ul>
+
+<br>
+
+<ul>
+	<li *ngFor="let item of list01; let i = index">{{item}} --- {{i}}</li>
+</ul>
+
+<br>
+
+<ul>
+	<li *ngFor="let item of list02; let i = index">{{item.title}} --- {{i}}</li>
+</ul>
+
+<br>
+
+<ul>
+	<li *ngFor="let item of list03; let key = index">
+		{{item.catename}} --- {{key}}
+		<ol>
+			<li *ngFor="let car of item.list; let i = index">
+				{{car.title}} --- {{key}}-{{i}}
+			</li>
+		</ol>
+	</li>
+</ul>
+
+<br>
+
+<!-- <ul>
+	<li template="ngFor let item of list02; let i = index">{{item.title}} --- {{i}}</li>
+</ul> -->
