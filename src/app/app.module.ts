@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 
+import { HttpModule, JsonpModule } from '@angular/http'; // 注入数据请求模块
+
+import { StorageService } from './services/storage.service';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NewsComponent } from './components/news/news.component';
 import { HomeComponent } from './components/home/home.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
 import { NewssComponent } from './components/newss/newss.component';
-
-import { StorageService } from './services/storage.service';
-
-import { HttpModule, JsonpModule } from '@angular/http'; // 注入数据请求模块
+import { HeaderrComponent } from './components/headerr/headerr.component';
+import { NewscComponent } from './components/newsc/newsc.component';
+import { HomeeComponent } from './components/homee/homee.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { HttpModule, JsonpModule } from '@angular/http'; // 注入数据请求�
     NewsComponent,
     HomeComponent,
     TodolistComponent,
-    NewssComponent
+    NewssComponent,
+    HeaderrComponent,
+    NewscComponent,
+    HomeeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
