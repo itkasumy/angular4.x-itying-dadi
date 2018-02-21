@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NewsComponent } from './components/news/news.component';
 import { HomeComponent } from './components/home/home.component';
+import { TodolistComponent } from './components/todolist/todolist.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     HeaderComponent,
     NewsComponent,
-    HomeComponent
+    HomeComponent,
+    TodolistComponent
   ],
   imports: [
     BrowserModule,
