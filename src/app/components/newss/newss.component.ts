@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { Http, Jsonp, Headers } from '@angular/http'; // 导入数据请求模块
 
+import { Observable } from 'rxjs';
+import 'rxjs/Rx';
+
 @Component({
   selector: 'app-newss',
   templateUrl: './newss.component.html',
@@ -18,25 +21,49 @@ export class NewssComponent implements OnInit {
   ngOnInit() {
   }
 
-  requestData () {
+  // requestData () {
+  //   const that = this;
+  //   const url = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1';
+  //   this.http.get(url).subscribe((data) => {
+  //     // console.log(JSON.parse(data['_body']));
+  //     that.list = JSON.parse(data['_body']).result;
+  //     console.log(that.list);
+  //   }, (error) => {
+  //     console.log(error);
+  //   });
+  // }
+
+  requestData() {
     const that = this;
     const url = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1';
-    this.http.get(url).subscribe((data) => {
-      // console.log(JSON.parse(data['_body']));
-      that.list = JSON.parse(data['_body']).result;
-      console.log(that.list);
+    this.http.get(url)
+    .map(res => res.json())
+    .subscribe((data) => {
+      console.log(data);
     }, (error) => {
       console.log(error);
     });
   }
 
-  requestJsonpData () {
+  // requestJsonpData () {
+  //   const that = this;
+  //   const url = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1&callback=JSONP_CALLBACK';
+  //   this.jsonp.get(url).subscribe((data) => {
+  //     console.log(data);
+  //     that.list = data['_body'].result;
+  //     console.log(that.list);
+  //   }, (error) => {
+  //     console.log(error);
+  //   });
+  // }
+
+  requestJsonpData() {
     const that = this;
     const url = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1&callback=JSONP_CALLBACK';
-    this.jsonp.get(url).subscribe((data) => {
+    this.jsonp.get(url)
+    .map(res => res.json())
+    .subscribe((data) => {
       console.log(data);
-      that.list = data['_body'].result;
-      console.log(that.list);
     }, (error) => {
       console.log(error);
     });
