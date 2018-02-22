@@ -17,6 +17,8 @@ import { HeaderrComponent } from './components/headerr/headerr.component';
 import { NewscComponent } from './components/newsc/newsc.component';
 import { HomeeComponent } from './components/homee/homee.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProductComponent } from './components/product/product.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderrComponent,
     NewscComponent,
     HomeeComponent,
-    FooterComponent
+    FooterComponent,
+    ProductComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
