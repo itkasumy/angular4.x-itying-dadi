@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { NewsComponent } from './components/news/news.component';
 import { UserComponent } from './components/user/user.component';
+import { NewscontentComponent } from './components/newscontent/newscontent.component';
+
 
 const routes: Routes = [
   {
@@ -18,6 +20,10 @@ const routes: Routes = [
   {
     path: 'user',
     component: UserComponent
+  },
+  {
+    path: 'newscontent/:id',
+    component: NewscontentComponent
   },
   {
     path: '',
