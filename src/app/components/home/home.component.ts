@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Router } from '@angular/router';
+// 引入 Router       NavigationExtras get 传参
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,19 @@ export class HomeComponent implements OnInit {
     // alert('123');
     // this.router.navigate(['/news']);
     this.router.navigate(['/newscontent', '2']);
+  }
+
+  goShop (id, aid) {
+    // 跳转路由 get 传值
+    const navigationExtras: NavigationExtras = {
+      queryParams: {
+        'id': id,
+        'aid': aid
+      }
+      // fragment: 'anchor'
+    };
+    // 配置参数
+    this.router.navigate(['/shoplist'], navigationExtras);
   }
 
 }

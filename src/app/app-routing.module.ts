@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NewsComponent } from './components/news/news.component';
 import { UserComponent } from './components/user/user.component';
 import { NewscontentComponent } from './components/newscontent/newscontent.component';
+import { ShoplistComponent } from './components/shoplist/shoplist.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'newscontent/:id',
     component: NewscontentComponent
+  },
+  {
+    path: 'shoplist',
+    component: ShoplistComponent
   },
   {
     path: '',
